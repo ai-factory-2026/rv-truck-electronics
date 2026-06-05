@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6816797844218328" crossorigin="anonymous"></script>
+    <title>Battery Size Calculator: Find the Right RV Battery | TruckGear Hub</title>
+    <meta name="description" content="Free battery size calculator for RVs and trucks. Input your power needs and get battery recommendations. Lithium vs lead-acid explained.">
+    <meta name="keywords" content="battery size calculator, RV battery calculator, battery capacity calculator, amp hours calculator, lithium battery size">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://truckgearhub.pages.dev/battery-size-calculator.html">
+    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="cookie-consent.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🚛</span>
+                <span class="logo-text">TruckGear<span class="highlight">Hub</span></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="dash-cam-guide.html" class="nav-link">Dash Cams</a>
+                <a href="power-stations.html" class="nav-link">Power Stations</a>
+                <a href="rv-solar.html" class="nav-link">RV Solar</a>
+                <a href="12v-appliances.html" class="nav-link">12V Gear</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="article-content">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> / Tools
+            </nav>
+            
+            <article class="guide-article">
+                <header class="article-header">
+                    <span class="article-category">Free Tool</span>
+                    <h1>Battery Size Calculator</h1>
+                    <div class="article-meta">
+                        <span>🔋 Find the right battery capacity</span>
+                    </div>
+                </header>
+
+                <div class="article-body">
+                    <p class="lead">I built this calculator after spending three hours manually calculating my battery needs for my first boondocking trip—then realizing I'd massively overspent on batteries I didn't need. Use this instead. It'll save you both money and guesswork.</p>
+
+                    <div class="calculator-container">
+                        <div class="calculator-section">
+                            <h2>Step 1: Select Your Battery Type</h2>
+                            <p>Different battery types have different usable capacities.</p>
+                            
+                            <div class="battery-type-selector">
+                                <label class="type-option">
+                                    <input type="radio" name="batteryType" value="lifepo4" checked>
+                                    <div class="type-content">
+                                        <strong>LiFePO4 (Lithium)</strong>
+                                        <span>80-100% usable • 3,000+ cycles</span>
+                                    </div>
+                                </label>
+                                <label class="type-option">
+                                    <input type="radio" name="batteryType" value="agm">
+                                    <div class="type-content">
+                                        <strong>AGM</strong>
+                                        <span>50% usable • 500-800 cycles</span>
+                                    </div>
+                                </label>
+                                <label class="type-option">
+                                    <input type="radio" name="batteryType" value="flooded">
+                                    <div class="type-content">
+                                        <strong>Flooded Lead-Acid</strong>
+                                        <span>50% usable • 500 cycles</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="calculator-section">
+                            <h2>Step 2: Select Your Appliances</h2>
+                            <p>Choose the appliances you use daily.</p>
+                            
+                            <div class="appliance-grid">
+                                <div class="appliance-card">
+                                    <label>
+                                        <input type="checkbox" class="bat-appliance" data-watts="50">
+                                        <span class="appliance-name">LED Lights</span>
+                                        <span class="appliance-watts">50W</span>
+                                    </label>
+                                    <select class="bat-hours">
+                                        <option value="4" selected>4 hrs</option>
+                                        <option value="6">6 hrs</option>
+                                        <option value="8">8 hrs</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="appliance-card">
+                                    <label>
+                                        <input type="checkbox" class="bat-appliance" data-watts="60" checked>
+                                        <span class="appliance-name">12V Fridge</span>
+                                        <span class="appliance-watts">60W</span>
+                                    </label>
+                                    <select class="bat-hours">
+                                        <option value="12">12 hrs</option>
+                                        <option value="24" selected>24 hrs</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="appliance-card">
+                                    <label>
+                                        <input type="checkbox" class="bat-appliance" data-watts="50">
+                                        <span class="appliance-name">Water Pump</span>
+                                        <span class="appliance-watts">50W</span>
+                                    </label>
+                                    <select class="bat-hours">
+                                        <option value="0.5" selected>30 min</option>
+                                        <option value="1">60 min</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="appliance-card">
+                                    <label>
+                                        <input type="checkbox" class="bat-appliance" data-watts="40">
+                                        <span class="appliance-name">Phone Charging</span>
+                                        <span class="appliance-watts">40W</span>
+                                    </label>
+                                    <select class="bat-hours">
+                                        <option value="4" selected>4 hrs</option>
+                                        <option value="8">8 hrs</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="appliance-card">
+                                    <label>
+                                        <input type="checkbox" class="bat-appliance" data-watts="100">
+                                        <span class="appliance-name">Laptop</span>
+                                        <span class="appliance-watts">100W</span>
+                                    </label>
+                                    <select class="bat-hours">
+                                        <option value="4" selected>4 hrs</option>
+                                        <option value="6">6 hrs</option>
+                                        <option value="8">8 hrs</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="appliance-card">
+                                    <label>
+                                        <input type="checkbox" class="bat-appliance" data-watts="30">
+                                        <span class="appliance-name">CPAP</span>
+                                        <span class="appliance-watts">30W</span>
+                                    </label>
+                                    <select class="bat-hours">
+                                        <option value="8" selected>8 hrs</option>
+                                        <option value="10">10 hrs</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calculator-section">
+                            <h2>Step 3: Days of Autonomy</h2>
+                            <p>How long do you want to run without charging?</p>
+                            
+                            <div class="days-selector">
+                                <label>
+                                    <input type="radio" name="days" value="1">
+                                    <span>1 Day</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="days" value="2" checked>
+                                    <span>2 Days</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="days" value="3">
+                                    <span>3 Days</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="days" value="4">
+                                    <span>4 Days</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="calculator-section">
+                            <button type="button" class="btn btn-primary btn-large" onclick="calculateBattery()">Calculate Battery Needs</button>
+                        </div>
+
+                        <div class="calculator-results" id="batteryResults" style="display:none;">
+                            <h2>Your Battery Recommendations</h2>
+                            
+                            <div class="result-summary">
+                                <div class="summary-item">
+                                    <span class="summary-label">Daily Usage</span>
+                                    <span class="summary-value" id="dailyUsage">0 Wh</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Usable Capacity Needed</span>
+                                    <span class="summary-value" id="usableCapacity">0 Wh</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span class="summary-label">Raw Capacity Needed</span>
+                                    <span class="summary-value" id="rawCapacity">0 Wh</span>
+                                </div>
+                            </div>
+                            
+                            <div class="battery-options">
+                                <div class="battery-option">
+                                    <h3>Recommended: LiFePO4 Battery</h3>
+                                    <p class="option-highlight" id="lifepo4Rec">1 x 200Ah @ 12V</p>
+                                    <p class="option-note">Best long-term value, 10+ year lifespan</p>
+                                    <a href="https://www.amazon.com/s?k=200Ah+LiFePO4+12V+battery&tag=aifactory20-20" class="btn btn-primary" target="_blank" rel="nofollow sponsored">Shop LiFePO4 Batteries →</a>
+                                </div>
+                                
+                                <div class="battery-option agm-option">
+                                    <h3>Alternative: AGM Battery</h3>
+                                    <p class="option-highlight" id="agmRec">1 x 400Ah @ 12V</p>
+                                    <p class="option-note">Mid-range option, good for occasional use</p>
+                                    <a href="https://www.amazon.com/s?k=AGM+battery+12V+200Ah&tag=aifactory20-20" class="btn btn-secondary" target="_blank" rel="nofollow sponsored">Shop AGM Batteries →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Understanding Battery Sizing</h2>
+                    
+                    <h3>Depth of Discharge (DoD)</h3>
+                    <p>You can't use a battery's full capacity without damaging it. Different battery types have different safe discharge levels:</p>
+                    <ul>
+                        <li><strong>LiFePO4:</strong> Use 80-100% of capacity</li>
+                        <li><strong>AGM:</strong> Use 50% of capacity</li>
+                        <li><strong>Flooded Lead-Acid:</strong> Use 50% of capacity</li>
+                    </ul>
+                </div>
+
+                <footer class="article-footer">
+                    <div class="related-guides">
+                        <h3>Related Guides</h3>
+                        <div class="related-grid">
+                            <a href="rv-battery-guide.html" class="related-card">
+                                <span class="related-icon">🔋</span>
+                                <span>Battery Guide</span>
+                            </a>
+                            <a href="rv-solar.html" class="related-card">
+                                <span class="related-icon">☀️</span>
+                                <span>Solar Guide</span>
+                            </a>
+                            <a href="solar-calculator.html" class="related-card">
+                                <span class="related-icon">⚡</span>
+                                <span>Solar Calculator</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="affiliate-disclosure">
+                        <p><strong>Affiliate Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases.</p>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-box">
+                <h2>Get Weekly Gear Deals 📬</h2>
+                <form class="newsletter-form" action="#" method="POST">
+                    <input type="email" placeholder="your.email@example.com" required>
+                    <button type="submit" class="btn btn-primary">Subscribe Free</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🚛</span>
+                        <span class="logo-text">TruckGear<span class="highlight">Hub</span></span>
+                    </a>
+                    <p>Real-world guides for real truckers.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="dash-cam-guide.html">Dash Cams</a></li>
+                        <li><a href="power-stations.html">Power Stations</a></li>
+                        <li><a href="rv-solar.html">RV Solar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="solar-calculator.html">Solar Calculator</a></li>
+                        <li><a href="battery-size-calculator.html">Battery Calculator</a></li>
+                        <li><a href="tire-pressure-calculator.html">Tire Pressure Calculator</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TruckGear Hub. As an Amazon Associate, we earn from qualifying purchases.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .battery-type-selector {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .type-option {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: var(--bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .type-option:hover {
+            background: var(--border);
+        }
+        
+        .type-option input {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+        }
+        
+        .type-content {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .type-content span {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+        
+        .appliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        
+        .appliance-card {
+            background: var(--bg);
+            padding: 16px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .appliance-card label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+        
+        .appliance-card input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .appliance-name {
+            flex: 1;
+            font-weight: 500;
+        }
+        
+        .appliance-watts {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+        
+        .bat-hours {
+            padding: 8px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: var(--white);
+        }
+        
+        .days-selector {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .days-selector label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: var(--bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .days-selector input {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .calculator-results {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 32px;
+            border-radius: var(--radius);
+            margin-top: 24px;
+        }
+        
+        .calculator-results h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+        
+        .result-summary {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+        
+        .summary-item {
+            background: rgba(255,255,255,0.1);
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-label {
+            display: block;
+            font-size: 13px;
+            opacity: 0.8;
+            margin-bottom: 4px;
+        }
+        
+        .summary-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .battery-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .battery-option {
+            background: rgba(255,255,255,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .battery-option h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .option-highlight {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        
+        .option-note {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            .result-summary {
+                grid-template-columns: 1fr;
+            }
+            
+            .battery-options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script src="main.js"></script>
+    <script>
+        function calculateBattery() {
+            let dailyWh = 0;
+            
+            document.querySelectorAll('.appliance-card').forEach(card => {
+                const checkbox = card.querySelector('.bat-appliance');
+                if (checkbox.checked) {
+                    const watts = parseInt(checkbox.dataset.watts);
+                    const hours = parseFloat(card.querySelector('.bat-hours').value);
+                    dailyWh += watts * hours;
+                }
+            });
+            
+            if (dailyWh === 0) {
+                alert('Please select at least one appliance');
+                return;
+            }
+            
+            const batteryType = document.querySelector('input[name="batteryType"]:checked').value;
+            const days = parseInt(document.querySelector('input[name="days"]:checked').value);
+            
+            const dodValues = { 'lifepo4': 0.8, 'agm': 0.5, 'flooded': 0.5 };
+            const dod = dodValues[batteryType];
+            
+            const usableCapacity = dailyWh * days;
+            const rawCapacity = usableCapacity / dod;
+            const requiredAh = Math.ceil(rawCapacity / 12 / 10) * 10;
+            const agmAh = Math.ceil((dailyWh * days / 0.5) / 12 / 10) * 10;
+            
+            document.getElementById('dailyUsage').textContent = dailyWh.toFixed(0) + ' Wh';
+            document.getElementById('usableCapacity').textContent = usableCapacity.toFixed(0) + ' Wh';
+            document.getElementById('rawCapacity').textContent = rawCapacity.toFixed(0) + ' Wh';
+            
+            let lifepo4Rec = '';
+            if (requiredAh <= 100) lifepo4Rec = '1 x 100Ah @ 12V';
+            else if (requiredAh <= 200) lifepo4Rec = '1 x 200Ah @ 12V';
+            else if (requiredAh <= 300) lifepo4Rec = '2 x 100Ah @ 12V (parallel)';
+            else lifepo4Rec = '2 x 200Ah @ 12V (parallel)';
+            
+            let agmRec = '';
+            if (agmAh <= 200) agmRec = '1 x 200Ah @ 12V';
+            else agmRec = '2 x 200Ah @ 12V (parallel)';
+            
+            document.getElementById('lifepo4Rec').textContent = lifepo4Rec;
+            document.getElementById('agmRec').textContent = agmRec;
+            
+            document.getElementById('batteryResults').style.display = 'block';
+            document.getElementById('batteryResults').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+<script src="cookie-consent.js"></script>
+</body>
+</html>

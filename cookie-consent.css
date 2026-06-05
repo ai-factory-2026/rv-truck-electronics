@@ -1,0 +1,76 @@
+/* Cookie Consent Banner - GDPR Compliant */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  padding: 16px 24px;
+  z-index: 99999;
+  display: none;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.cookie-banner.show {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.cookie-banner p {
+  margin: 0;
+  flex: 1;
+  min-width: 200px;
+}
+.cookie-banner a {
+  color: #6ec6ff;
+  text-decoration: underline;
+}
+.cookie-banner a:hover {
+  color: #9dd6ff;
+}
+.cookie-banner .cookie-btns {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.cookie-btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+.cookie-btn:active {
+  transform: scale(0.97);
+}
+.cookie-btn-accept {
+  background: #4caf50;
+  color: #fff;
+}
+.cookie-btn-accept:hover {
+  background: #43a047;
+}
+.cookie-btn-reject {
+  background: #555;
+  color: #e0e0e0;
+}
+.cookie-btn-reject:hover {
+  background: #666;
+}
+@media (max-width: 600px) {
+  .cookie-banner.show {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cookie-banner .cookie-btns {
+    width: 100%;
+    justify-content: center;
+  }
+}

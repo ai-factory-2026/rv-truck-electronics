@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6816797844218328" crossorigin="anonymous"></script>
+    <title>Tire Pressure Calculator for RVs & Trucks | TruckGear Hub</title>
+    <meta name="description" content="Free tire pressure calculator for RVs, trucks, and trailers. Get the correct PSI for your vehicle based on load, size, and manufacturer specs.">
+    <meta name="keywords" content="tire pressure calculator, RV tire pressure, truck tire pressure, PSI calculator, trailer tire pressure">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://truckgearhub.pages.dev/tire-pressure-calculator.html">
+    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="cookie-consent.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🚛</span>
+                <span class="logo-text">TruckGear<span class="highlight">Hub</span></span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="dash-cam-guide.html" class="nav-link">Dash Cams</a>
+                <a href="power-stations.html" class="nav-link">Power Stations</a>
+                <a href="rv-solar.html" class="nav-link">RV Solar</a>
+                <a href="12v-appliances.html" class="nav-link">12V Gear</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="article-content">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> / Tools
+            </nav>
+            
+            <article class="guide-article">
+                <header class="article-header">
+                    <span class="article-category">Free Tool</span>
+                    <h1>Tire Pressure Calculator</h1>
+                    <div class="article-meta">
+                        <span>🛞 Find your optimal tire pressure</span>
+                    </div>
+                </header>
+
+                <div class="article-body">
+                    <p class="lead">Blew a tire outside Amarillo because I was running the wrong pressure. After that, I got serious about knowing exactly what my tires needed. This calculator's what I use now—takes the guesswork out of inflation.</p>
+
+                    <div class="calculator-container">
+                        <div class="calculator-section">
+                            <h2>Step 1: Select Your Vehicle Type</h2>
+                            
+                            <div class="vehicle-grid">
+                                <label class="vehicle-option" onclick="selectVehicle('travel-trailer')">
+                                    <input type="radio" name="vehicleType" value="travel-trailer">
+                                    <div class="vehicle-icon">🚐</div>
+                                    <span class="vehicle-name">Travel Trailer</span>
+                                </label>
+                                <label class="vehicle-option" onclick="selectVehicle('fifth-wheel')">
+                                    <input type="radio" name="vehicleType" value="fifth-wheel">
+                                    <div class="vehicle-icon">🏠</div>
+                                    <span class="vehicle-name">Fifth Wheel</span>
+                                </label>
+                                <label class="vehicle-option" onclick="selectVehicle('motorhome')">
+                                    <input type="radio" name="vehicleType" value="motorhome">
+                                    <div class="vehicle-icon">🚌</div>
+                                    <span class="vehicle-name">Motorhome</span>
+                                </label>
+                                <label class="vehicle-option" onclick="selectVehicle('semi-truck')">
+                                    <input type="radio" name="vehicleType" value="semi-truck">
+                                    <div class="vehicle-icon">🚛</div>
+                                    <span class="vehicle-name">Semi Truck</span>
+                                </label>
+                                <label class="vehicle-option" onclick="selectVehicle('flatbed')">
+                                    <input type="radio" name="vehicleType" value="flatbed">
+                                    <div class="vehicle-icon">📦</div>
+                                    <span class="vehicle-name">Flatbed/Box Truck</span>
+                                </label>
+                                <label class="vehicle-option" onclick="selectVehicle('utility-trailer')">
+                                    <input type="radio" name="vehicleType" value="utility-trailer">
+                                    <div class="vehicle-icon">🛻</div>
+                                    <span class="vehicle-name">Utility Trailer</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="calculator-section">
+                            <h2>Step 2: Load Condition</h2>
+                            <p>How heavily are you loading your vehicle?</p>
+                            
+                            <div class="load-selector">
+                                <label>
+                                    <input type="radio" name="loadType" value="light" checked>
+                                    <div class="load-content">
+                                        <strong>Light Load</strong>
+                                        <span>50-70% of max capacity</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="loadType" value="medium">
+                                    <div class="load-content">
+                                        <strong>Medium Load</strong>
+                                        <span>70-85% of max capacity</span>
+                                    </div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="loadType" value="heavy">
+                                    <div class="load-content">
+                                        <strong>Heavy Load</strong>
+                                        <span>85-100% of max capacity</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="calculator-section">
+                            <h2>Step 3: Temperature Adjustment</h2>
+                            <p>Temperature affects tire pressure. Adjust for your typical conditions.</p>
+                            
+                            <div class="temp-selector">
+                                <label>
+                                    <input type="radio" name="tempType" value="cold" checked>
+                                    <span>Cold (Below 50°F)</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tempType" value="normal">
+                                    <span>Normal (50-85°F)</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tempType" value="hot">
+                                    <span>Hot (Above 85°F)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="calculator-section">
+                            <button type="button" class="btn btn-primary btn-large" onclick="calculateTirePressure()">Calculate Tire Pressure</button>
+                        </div>
+
+                        <div class="calculator-results" id="tireResults" style="display:none;">
+                            <h2>Your Tire Pressure Recommendations</h2>
+                            
+                            <div class="psi-result">
+                                <div class="psi-main">
+                                    <span class="psi-value" id="recommendedPsi">0</span>
+                                    <span class="psi-label">PSI</span>
+                                </div>
+                                <p class="psi-note">Recommended cold pressure per tire</p>
+                            </div>
+                            
+                            <div class="psi-breakdown">
+                                <div class="psi-item">
+                                    <span class="psi-label">Minimum (DOT)</span>
+                                    <span class="psi-value-small" id="minPsi">0 PSI</span>
+                                </div>
+                                <div class="psi-item">
+                                    <span class="psi-label">Maximum (Sidewall)</span>
+                                    <span class="psi-value-small" id="maxPsi">0 PSI</span>
+                                </div>
+                                <div class="psi-item">
+                                    <span class="psi-label">Optimal Range</span>
+                                    <span class="psi-value-small" id="optimalRange">0-0 PSI</span>
+                                </div>
+                            </div>
+                            
+                            <div class="psi-warning" id="psiWarning" style="display:none;">
+                                <h4>⚠️ Important Safety Note</h4>
+                                <p id="warningText"></p>
+                            </div>
+                            
+                            <div class="psi-tips">
+                                <h3>Tips for Optimal Tire Pressure</h3>
+                                <ul>
+                                    <li>Check tire pressure when tires are cold (before driving)</li>
+                                    <li>Check pressure monthly and before long trips</li>
+                                    <li>Use a quality tire gauge - digital preferred</li>
+                                    <li>Don't forget the spare tire!</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Recommended Pressures by Vehicle Type</h2>
+                    
+                    <div class="pressure-reference">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Vehicle Type</th>
+                                    <th>Typical Pressure</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Travel Trailer</td>
+                                    <td>65-80 PSI</td>
+                                    <td>Follow manufacturer specs</td>
+                                </tr>
+                                <tr>
+                                    <td>Fifth Wheel</td>
+                                    <td>80-110 PSI</td>
+                                    <td>Axle ratings matter</td>
+                                </tr>
+                                <tr>
+                                    <td>Class A Motorhome</td>
+                                    <td>80-110 PSI</td>
+                                    <td>Steer vs drive tires differ</td>
+                                </tr>
+                                <tr>
+                                    <td>Class C Motorhome</td>
+                                    <td>65-80 PSI</td>
+                                    <td>Based on truck chassis</td>
+                                </tr>
+                                <tr>
+                                    <td>Semi Truck</td>
+                                    <td>100-120 PSI</td>
+                                    <td>Steer: 110, Drive: 100</td>
+                                </tr>
+                                <tr>
+                                    <td>Utility Trailer</td>
+                                    <td>50-65 PSI</td>
+                                    <td>Check axle capacity</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <footer class="article-footer">
+                    <div class="related-guides">
+                        <h3>Related Guides</h3>
+                        <div class="related-grid">
+                            <a href="tire-pressure-monitors.html" class="related-card">
+                                <span class="related-icon">🛞</span>
+                                <span>TPMS Guide</span>
+                            </a>
+                            <a href="dash-cam-guide.html" class="related-card">
+                                <span class="related-icon">📹</span>
+                                <span>Dash Cam Guide</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="affiliate-disclosure">
+                        <p><strong>Affiliate Disclosure:</strong> As an Amazon Associate, we earn from qualifying purchases.</p>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-box">
+                <h2>Get Weekly Gear Deals 📬</h2>
+                <form class="newsletter-form" action="#" method="POST">
+                    <input type="email" placeholder="your.email@example.com" required>
+                    <button type="submit" class="btn btn-primary">Subscribe Free</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🚛</span>
+                        <span class="logo-text">TruckGear<span class="highlight">Hub</span></span>
+                    </a>
+                    <p>Real-world guides for real truckers.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Guides</h4>
+                    <ul>
+                        <li><a href="dash-cam-guide.html">Dash Cams</a></li>
+                        <li><a href="power-stations.html">Power Stations</a></li>
+                        <li><a href="rv-solar.html">RV Solar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="solar-calculator.html">Solar Calculator</a></li>
+                        <li><a href="battery-size-calculator.html">Battery Calculator</a></li>
+                        <li><a href="tire-pressure-calculator.html">Tire Pressure Calculator</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TruckGear Hub. As an Amazon Associate, we earn from qualifying purchases.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .vehicle-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        
+        .vehicle-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 24px 16px;
+            background: var(--bg);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+        
+        .vehicle-option:hover {
+            border-color: var(--accent);
+        }
+        
+        .vehicle-option:has(input:checked) {
+            border-color: var(--accent);
+            background: rgba(245, 158, 11, 0.1);
+        }
+        
+        .vehicle-option input {
+            display: none;
+        }
+        
+        .vehicle-icon {
+            font-size: 48px;
+            margin-bottom: 8px;
+        }
+        
+        .vehicle-name {
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .load-selector {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .load-selector label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: var(--bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .load-selector label:hover {
+            background: var(--border);
+        }
+        
+        .load-selector input {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .load-content {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .load-content span {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+        
+        .temp-selector {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .temp-selector label {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px;
+            background: var(--bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .temp-selector label:hover {
+            background: var(--border);
+        }
+        
+        .temp-selector input {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .calculator-results {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 32px;
+            border-radius: var(--radius);
+            margin-top: 24px;
+        }
+        
+        .calculator-results h2 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+        
+        .psi-result {
+            text-align: center;
+            padding: 32px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .psi-main {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .psi-main .psi-value {
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .psi-main .psi-label {
+            font-size: 32px;
+            opacity: 0.8;
+        }
+        
+        .psi-note {
+            margin-top: 8px;
+            opacity: 0.8;
+        }
+        
+        .psi-breakdown {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .psi-item {
+            background: rgba(255,255,255,0.1);
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .psi-label {
+            display: block;
+            font-size: 12px;
+            opacity: 0.8;
+            margin-bottom: 4px;
+        }
+        
+        .psi-value-small {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .psi-warning {
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid var(--accent);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        
+        .psi-warning h4 {
+            margin-bottom: 8px;
+            color: var(--accent);
+        }
+        
+        .psi-tips {
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .psi-tips h3 {
+            margin-bottom: 12px;
+        }
+        
+        .psi-tips ul {
+            list-style: disc;
+            padding-left: 24px;
+        }
+        
+        .psi-tips li {
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+        
+        .pressure-reference {
+            overflow-x: auto;
+        }
+        
+        .pressure-reference table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .pressure-reference th,
+        .pressure-reference td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .pressure-reference th {
+            background: var(--bg);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .vehicle-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .temp-selector {
+                flex-direction: column;
+            }
+            
+            .psi-breakdown {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script src="main.js"></script>
+    <script>
+        function selectVehicle(type) {
+            document.querySelector('input[value="' + type + '"]').checked = true;
+        }
+        
+        function calculateTirePressure() {
+            const vehicleType = document.querySelector('input[name="vehicleType"]:checked')?.value;
+            if (!vehicleType) {
+                alert('Please select a vehicle type');
+                return;
+            }
+            
+            const loadType = document.querySelector('input[name="loadType"]:checked').value;
+            const tempType = document.querySelector('input[name="tempType"]:checked').value;
+            
+            const basePressures = {
+                'travel-trailer': 65,
+                'fifth-wheel': 80,
+                'motorhome': 80,
+                'semi-truck': 100,
+                'flatbed': 80,
+                'utility-trailer': 50
+            };
+            
+            const loadAdjustments = { 'light': -5, 'medium': 0, 'heavy': 10 };
+            const tempAdjustments = { 'cold': 5, 'normal': 0, 'hot': -5 };
+            
+            let recommendedPsi = basePressures[vehicleType] + loadAdjustments[loadType] + tempAdjustments[tempType];
+            
+            const minMax = {
+                'travel-trailer': [50, 80],
+                'fifth-wheel': [65, 110],
+                'motorhome': [65, 110],
+                'semi-truck': [80, 120],
+                'flatbed': [65, 110],
+                'utility-trailer': [40, 65]
+            };
+            
+            const [min, max] = minMax[vehicleType];
+            const loadFactors = { 'light': 0.85, 'medium': 1.0, 'heavy': 1.1 };
+            
+            const optimalMin = Math.round(recommendedPsi * loadFactors[loadType] * 0.9);
+            const optimalMax = Math.round(recommendedPsi * loadFactors[loadType] * 1.05);
+            
+            document.getElementById('recommendedPsi').textContent = Math.round(recommendedPsi);
+            document.getElementById('minPsi').textContent = min + ' PSI';
+            document.getElementById('maxPsi').textContent = max + ' PSI';
+            document.getElementById('optimalRange').textContent = optimalMin + '-' + optimalMax + ' PSI';
+            
+            const warningDiv = document.getElementById('psiWarning');
+            if (loadType === 'heavy') {
+                warningDiv.style.display = 'block';
+                document.getElementById('warningText').textContent = 
+                    'At heavy load capacity, ensure your tire pressure matches or exceeds the manufacturer\'s minimum requirements. Under-inflation at heavy loads can cause tire failure.';
+            } else {
+                warningDiv.style.display = 'none';
+            }
+            
+            document.getElementById('tireResults').style.display = 'block';
+            document.getElementById('tireResults').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+<script src="cookie-consent.js"></script>
+</body>
+</html>

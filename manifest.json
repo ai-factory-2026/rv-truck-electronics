@@ -1,0 +1,21 @@
+{
+  "name": "TruckGear Hub - RV & Truck Electronics Guide",
+  "short_name": "TruckGear",
+  "description": "Expert reviews and guides on electronics for RVs, trucks, and overlanding adventures.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2d1810",
+  "theme_color": "#ff6b35",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
